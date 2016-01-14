@@ -47,7 +47,7 @@ defmodule Rumbl.Auth do
   end
 
   def authenticate_user(conn, _opts) do
-    if conn.assigns.current_user do
+    if conn.assigns[:current_user] do
       conn
     else
       conn
